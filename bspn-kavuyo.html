@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSPN Clearance Requirements - Kavuyo Reporting Period</title>
+    <meta name="description" content="BSPN Butabika School of Psychiatric Nursing - Kavuyo Reporting Period Clearance Package">
+    <!-- Google Fonts for Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f4c5c;
+            --primary-dark: #0a3333;
+            --accent: #fb8b24;
+            --accent-dark: #e67a1f;
+            --text: #2b2d42;
+            --text-light: #52606b;
+            --bg: #f8f9fa;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --border: #e1e8ed;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #e8f4f8 0%, #f0f4f8 100%);
+            color: var(--text);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 10% 20%, rgba(15, 76, 92, 0.05) 0%, transparent 30%),
+                        radial-gradient(circle at 90% 80%, rgba(251, 139, 36, 0.05) 0%, transparent 30%);
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Top Notification Bar */
+        .notification-bar {
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(15, 76, 92, 0.2);
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+        
+        .header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--text);
+            margin-bottom: 15px;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        /* Countdown Timer */
+        .countdown-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .countdown-label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+        
+        .countdown-item {
+            background: var(--card-bg);
+            padding: 20px 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border);
+            min-width: 80px;
+        }
+        
+        .countdown-value {
+            font-size: 2.5rem;
+            color: var(--primary);
+            line-height: 1;
+        }
+        
+        .countdown-label-text {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+        
+        /* Products Section */
+        .products-section {
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--text);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .product-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+        
+        .product-description {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+        
+        /* Action Buttons Section */
+        .action-section {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+            border: 1px solid var(--border);
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        
+        .action-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--text);
+        }
+        
+        .action-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .action-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 20px;
+            border-radius: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+        
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+        }
+        
+        .btn-airtel {
+            background: #FF6600;
+            color: white;
+        }
+        
+        .btn-airtel:hover {
+            background: #E65100;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 102, 0, 0.3);
+        }
+        
+        .btn-mtn {
+            background: #00A859;
+            color: white;
+        }
+        
+        .btn-mtn:hover {
+            background: #008A47;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 168, 89, 0.3);
+        }
+        
+        .btn-email {
+            background: #4285F4;
+            color: white;
+        }
+        
+        .btn-email:hover {
+            background: #357AE8;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(66, 133, 244, 0.3);
+        }
+        
+        .action-btn i {
+            font-size: 1.2rem;
+        }
+        
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 25px 30px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(15, 76, 92, 0.25);
+        }
+        
+        .cta-banner h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .cta-banner p {
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 25px;
+            color: var(--text-light);
+            border-top: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+        
+        .footer p {
+            margin: 5px 0;
+        }
+        
+        .footer .developer-credit {
+            font-weight: 600;
+            color: var(--text);
+        }
+        
+        /* BSPN Logo */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .bspn-logo {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border: 2px solid var(--border);
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .countdown {
+                flex-wrap: wrap;
+            }
+            
+            .countdown-item {
+                min-width: 65px;
+                padding: 15px 18px;
+            }
+            
+            .countdown-value {
+                font-size: 2rem;
+            }
+            
+            .action-buttons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Top Notification Bar -->
+        <div class="notification-bar">
+            🚨 Kavuyo Reporting Period Special: Secure your discount before it expires!
+        </div>
+        
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo-container">
+                <img src="./BSPN_LOGO-removebg-preview.png" alt="BSPN Logo" class="bspn-logo">
+            </div>
+            <h1>BSPN Clearance Packages</h1>
+            <h2>Made Easy for Butabika School of Psychiatric Nursing Students</h2>
+            <p>Skip the stress. Get your complete, school-approved reporting requirements bundle in one place. All products meet BSPN standards for the upcoming semester clearance.</p>
+        </header>
+        
+        <!-- Countdown Timer -->
+        <section class="countdown-section">
+            <div class="countdown-label">Discount Expires In:</div>
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-value" id="days">00</div>
+                    <div class="countdown-label-text">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="hours">00</div>
+                    <div class="countdown-label-text">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="minutes">00</div>
+                    <div class="countdown-label-text">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="seconds">00</div>
+                    <div class="countdown-label-text">Seconds</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Banner -->
+        <div class="cta-banner">
+            <h3>🎯 Limited Time Offer!</h3>
+            <p>Order now and get 15% off your complete clearance package. All items verified for BSPN standards.</p>
+        </div>
+        
+        <!-- Products Section -->
+        <section class="products-section">
+            <h2 class="section-title">Requirement Bundle Showcase</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="./liquid soap.jpg" alt="Premium Liquid Soap" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Premium Liquid Soap</div>
+                        <p class="product-description">Clear, modern dispenser bottle highlighting cleanliness and hygiene standards required for nursing students.</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="./vim.jpg" alt="Vim" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Vim & Jik Combo</div>
+                        <p class="product-description">Side-by-side crisp product shot ensuring they meet deep-cleaning standards for hospital environments. Includes Vim and Jik concentrates.</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="./Eurosilk toilet paper.jpg" alt="Eurosilk Toilet Paper" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Eurosilk Toilet Paper</div>
+                        <p class="product-description">Premium pack displayed to guarantee the exact brand quality required by BSPN regulations. Soft and absorbent for comfort.</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="./bar soap.jpg" alt="Bar Soap" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Cleaning Kit</div>
+                        <p class="product-description">Curated arrangement of high-quality broom, scrubbing brush, and durable mopping rug for dorm cleaning.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Action Buttons Section -->
+        <section class="action-section">
+            <h2 class="action-title">Get Your Package Now!</h2>
+            <div class="action-buttons">
+                <a href="https://wa.me/256746539328?text=Hello%20Joshua,%20I%20want%20to%20order%20my%20BSPN%20clearance%20package" target="_blank" class="action-btn btn-whatsapp">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.52 3.48A11.94 11.94 0 0 0 9.33 2C4.59 2 2 4.59 2 9.33c0 2.67 1.47 5.02 3.83 6.41-.3.7-.46 1.52-.46 2.38 0 .83.15 1.6.44 2.31-1.17.62-2.03 1.77-2.03 2.97 0 .74.55 1.34 1.26 1.51.9.23 1.82-.08 2.55-.69.33.23.7.39 1.1.42.4.03.82-.14 1.17-.46.3-.3.67-.5 1.1-.62.68-.17 1.37-.25 2.08-.25.64 0 1.28.07 1.9.2.26.08.5.2.73.33.23.13.43.33.68.51.23.18.44.41.72.64.14.11.28.23.42.33.33.22.68.35 1.06.35.15 0 .3-.01.45-.03.15-.02.3-.05.45-.08 1.17-.33 2.18-1.01 2.95-1.88.15-.18.28-.37.41-.56.1-.15.19-.31.28-.47.13-.23.24-.48.33-.74.11-.28.19-.57.26-.86.07-.29.11-.59.15-.89.08-.56.12-1.12.12-1.68 0-5.42-4.35-9.85-9.78-9.85-.74 0-1.46.05-2.18.15A11.97 11.97 0 0 0 20.52 3.48Z" />
+                    </svg>
+                    WhatsApp
+                </a>
+                
+                <a href="tel:0746539328" class="action-btn btn-airtel">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6.62 10.79a15.05 15.05 0 0 1 6.59-6.59l2.25 2.25a1 1 0 0 0 2.33-.67 3.17 3.17 0 0 1 2.72-2.72 1 1 0 0 0 .67-2.33A5.25 5.25 0 0 0 16.5 2c-2.89 0-5.5 1.47-7 3.84-1.17 1.96-1.78 4.28-1.7 6.62.07 2.34.83 4.53 2.1 6.25a1 1 0 0 1-.33 1.45l-1.86 1.86a1 1 0 0 0 .25 1.33l.12.09a11.25 11.25 0 0 0 6.59 6.59 1 1 0 0 0 1.33-.25l.09-.12a1 1 0 0 0 .33-.67 1 1 0 0 1-.67-1.33 1 1 0 0 0-.25-1.33l.12-.09a9.25 9.25 0 0 1-6.59-6.59 9.25 9.25 0 0 1-3.25-4.11 1 1 0 0 1-.33-.67l-.12-.09a1 1 0 0 0-.67-1.33 1 1 0 0 0-1.33.25l-.12.09a1 1 0 0 0-.33.67 1 1 0 0 1-.67 1.33 1 1 0 0 0-.25 1.33l-.12.09a1 1 0 0 0-.67 1.33 1 1 0 0 1-.33 1.33z" />
+                    </svg>
+                    Call Airtel
+                </a>
+                
+                <a href="tel:0768442790" class="action-btn btn-mtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6.62 10.79a15.05 15.05 0 0 1 6.59-6.59l2.25 2.25a1 1 0 0 0 2.33-.67 3.17 3.17 0 0 1 2.72-2.72 1 1 0 0 0 .67-2.33A5.25 5.25 0 0 0 16.5 2c-2.89 0-5.5 1.47-7 3.84-1.17 1.96-1.78 4.28-1.7 6.62.07 2.34.83 4.53 2.1 6.25a1 1 0 0 1-.33 1.45l-1.86 1.86a1 1 0 0 0 .25 1.33l.12.09a11.25 11.25 0 0 0 6.59 6.59 1 1 0 0 0 1.33-.25l.09-.12a1 1 0 0 0 .33-.67 1 1 0 0 1-.67-1.33 1 1 0 0 0-.25-1.33l.12-.09a9.25 9.25 0 0 1-6.59-6.59 9.25 9.25 0 0 1-3.25-4.11 1 1 0 0 1-.33-.67l-.12-.09a1 1 0 0 0-.67-1.33 1 1 0 0 0-1.33.25l-.12.09a1 1 0 0 0-.33.67 1 1 0 0 1-.67 1.33 1 1 0 0 0-.25 1.33l-.12.09a1 1 0 0 0-.67 1.33 1 1 0 0 1-.33 1.33z" />
+                    </svg>
+                    Call MTN
+                </a>
+                
+                <a href="mailto:joshuawangwe8@gmail.com?subject=BSPN%20Clearance%20Package%20Order" class="action-btn btn-email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+                    </svg>
+                    Email Me
+                </a>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <p>🎓 BSPN Butabika School of Psychiatric Nursing - Kavuyo Reporting Period</p>
+            <p>📅 Discount valid until July 23, 2026</p>
+            <p class="developer-credit">🚀 Powered & Designed by ORWART GRAPHICS & IT SOLUTIONS</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Countdown Timer Script
+        const countdownDate = new Date("July 23, 2026 23:59:59").getTime();
+        
+        const countdownInterval = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById("days").textContent = days.toString().padStart(2, "0");
+            document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+            document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+            document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+            
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.querySelector('.countdown-section').innerHTML = '<div class="countdown-label" style="color: #e74c3c;">Discount Period Ended</div>';
+            }
+        }, 1000);
+        
+        // Smooth scroll for anchor links (if needed)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
