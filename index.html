@@ -147,6 +147,52 @@
             letter-spacing: 1px;
             margin-top: 5px;
         }
+
+        /* HD Poster Section */
+        .poster-section {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .poster-container {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            max-width: 900px;
+            margin: 0 auto;
+            border: 3px solid var(--border);
+        }
+
+        .poster-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 100%;
+            object-fit: contain;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .poster-caption {
+            padding: 25px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .poster-caption p {
+            margin: 8px 0;
+            line-height: 1.5;
+        }
+
+        .poster-highlight {
+            font-size: 1.3rem;
+            color: #FFD700;
+            margin-top: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
         
         /* Products Section */
         .products-section {
@@ -412,6 +458,14 @@
             .action-buttons {
                 grid-template-columns: 1fr;
             }
+
+            .poster-caption {
+                font-size: 0.95rem;
+            }
+
+            .poster-highlight {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
@@ -451,6 +505,18 @@
                 <div class="countdown-item">
                     <div class="countdown-value" id="seconds">00</div>
                     <div class="countdown-label-text">Seconds</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HD Promotional Poster Section -->
+        <section class="poster-section">
+            <div class="poster-container">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1080 1440'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23e8f4f8;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23c3cfe2;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1080' height='1440' fill='url(%23bg)'/%3E%3Ctext x='540' y='200' font-family='Arial, sans-serif' font-size='72' font-weight='bold' text-anchor='middle' fill='%230f4c5c'%3E15%25 OFF%3C/text%3E%3Ctext x='540' y='320' font-family='Arial, sans-serif' font-size='48' font-weight='bold' text-anchor='middle' fill='%23fb8b24'%3EBSPN CLEARANCE PACKAGE%3C/text%3E%3Ctext x='540' y='420' font-family='Arial, sans-serif' font-size='36' text-anchor='middle' fill='%232b2d42'%3EComplete Discount Bundle%3C/text%3E%3Crect x='100' y='500' width='880' height='600' fill='rgba(255,255,255,0.9)' stroke='%230f4c5c' stroke-width='3' rx='20'/%3E%3Ctext x='540' y='580' font-family='Arial, sans-serif' font-size='32' font-weight='bold' text-anchor='middle' fill='%230f4c5c'%3EPRODUCTS %26 PRICES%3C/text%3E%3Ctext x='130' y='700' font-family='Arial, sans-serif' font-size='24' fill='%232b2d42'%3E✓ Surgical Gloves: 40,000 UGX%3C/text%3E%3Ctext x='130' y='770' font-family='Arial, sans-serif' font-size='24' fill='%232b2d42'%3E✓ Eurosilk Toilet Paper: 20,000 UGX%3C/text%3E%3Ctext x='130' y='840' font-family='Arial, sans-serif' font-size='24' fill='%232b2d42'%3E✓ Disposable Gloves: 18,000 UGX%3C/text%3E%3Ctext x='130' y='910' font-family='Arial, sans-serif' font-size='24' fill='%232b2d42'%3E✓ Liquid Soap: 8,000 UGX%3C/text%3E%3Ctext x='130' y='980' font-family='Arial, sans-serif' font-size='24' fill='%232b2d42'%3E✓ Jik %26 Vim: 13,000 UGX%3C/text%3E%3Ctext x='130' y='1050' font-family='Arial, sans-serif' font-size='24' fill='%232b2d42'%3E✓ Soft Broom %26 Cleaning Kit: 12,000 UGX%3C/text%3E%3Ctext x='540' y='1200' font-family='Arial, sans-serif' font-size='48' font-weight='bold' text-anchor='middle' fill='%23e74c3c'%3ETOTAL: 134,000 UGX%3C/text%3E%3Ctext x='540' y='1280' font-family='Arial, sans-serif' font-size='48' font-weight='bold' text-anchor='middle' fill='%2300a859'%3EAFTER 15%25 OFF: 113,900 UGX%3C/text%3E%3Ctext x='540' y='1380' font-family='Arial, sans-serif' font-size='28' font-style='italic' text-anchor='middle' fill='%230f4c5c'%3EValid Until: July 23, 2026%3C/text%3E%3C/svg%3E" alt="BSPN 15% Discount Promotional Poster - HD Quality" class="poster-image">
+                <div class="poster-caption">
+                    <p>🎯 <strong>SPECIAL OFFER: 15% OFF YOUR COMPLETE CLEARANCE PACKAGE</strong></p>
+                    <p>📦 Order the complete bundle and get everything you need for your BSPN clearance at an unbeatable price!</p>
+                    <div class="poster-highlight">💰 SAVE UP TO 20,100 UGX - LIMITED TIME ONLY!</div>
                 </div>
             </div>
         </section>
@@ -505,21 +571,21 @@
             <div class="action-buttons">
                 <a href="https://wa.me/256746539328?text=Hello%20Joshua,%20I%20want%20to%20order%20my%20BSPN%20clearance%20package" target="_blank" class="action-btn btn-whatsapp">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20.52 3.48A11.94 11.94 0 0 0 9.33 2C4.59 2 2 4.59 2 9.33c0 2.67 1.47 5.02 3.83 6.41-.3.7-.46 1.52-.46 2.38 0 .83.15 1.6.44 2.31-1.17.62-2.03 1.77-2.03 2.97 0 .74.55 1.34 1.26 1.51.9.23 1.82-.08 2.55-.69.33.23.7.39 1.1.42.4.03.82-.14 1.17-.46.3-.3.67-.5 1.1-.62.68-.17 1.37-.25 2.08-.25.64 0 1.28.07 1.9.2.26.08.5.2.73.33.23.13.43.33.68.51.23.18.44.41.72.64.14.11.28.23.42.33.33.22.68.35 1.06.35.15 0 .3-.01.45-.03.15-.02.3-.05.45-.08 1.17-.33 2.18-1.01 2.95-1.88.15-.18.28-.37.41-.56.1-.15.19-.31.28-.47.13-.23.24-.48.33-.74.11-.28.19-.57.26-.86.07-.29.11-.59.15-.89.08-.56.12-1.12.12-1.68 0-5.42-4.35-9.85-9.78-9.85-.74 0-1.46.05-2.18.15A11.97 11.97 0 0 0 20.52 3.48Z" />
+                        <path d="M20.52 3.48A11.94 11.94 0 0 0 9.33 2C4.59 2 2 4.59 2 9.33c0 2.67 1.47 5.02 3.83 6.41-.3.7-.46 1.52-.46 2.38 0 .83.15 1.6.44 2.31-1.17.62-2.03 1.77-2.03 2.97 0 .74[...]
                     </svg>
                     WhatsApp
                 </a>
                 
                 <a href="tel:0746539328" class="action-btn btn-airtel">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M6.62 10.79a15.05 15.05 0 0 1 6.59-6.59l2.25 2.25a1 1 0 0 0 2.33-.67 3.17 3.17 0 0 1 2.72-2.72 1 1 0 0 0 .67-2.33A5.25 5.25 0 0 0 16.5 2c-2.89 0-5.5 1.47-7 3.84-1.17 1.96-1.78 4.28-1.7 6.62.07 2.34.83 4.53 2.1 6.25a1 1 0 0 1-.33 1.45l-1.86 1.86a1 1 0 0 0 .25 1.33l.12.09a11.25 11.25 0 0 0 6.59 6.59 1 1 0 0 0 1.33-.25l.09-.12a1 1 0 0 0 .33-.67 1 1 0 0 1-.67-1.33 1 1 0 0 0-.25-1.33l.12-.09a9.25 9.25 0 0 1-6.59-6.59 9.25 9.25 0 0 1-3.25-4.11 1 1 0 0 1-.33-.67l-.12-.09a1 1 0 0 0-.67-1.33 1 1 0 0 0-1.33.25l-.12.09a1 1 0 0 0-.33.67 1 1 0 0 1-.67 1.33 1 1 0 0 0-.25 1.33l-.12.09a1 1 0 0 0-.67 1.33 1 1 0 0 1-.33 1.33z" />
+                        <path d="M6.62 10.79a15.05 15.05 0 0 1 6.59-6.59l2.25 2.25a1 1 0 0 0 2.33-.67 3.17 3.17 0 0 1 2.72-2.72 1 1 0 0 0 .67-2.33A5.25 5.25 0 0 0 16.5 2c-2.89 0-5.5 1.47-7 3.84-1[...]
                     </svg>
                     Call Airtel
                 </a>
                 
                 <a href="tel:0768442790" class="action-btn btn-mtn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M6.62 10.79a15.05 15.05 0 0 1 6.59-6.59l2.25 2.25a1 1 0 0 0 2.33-.67 3.17 3.17 0 0 1 2.72-2.72 1 1 0 0 0 .67-2.33A5.25 5.25 0 0 0 16.5 2c-2.89 0-5.5 1.47-7 3.84-1.17 1.96-1.78 4.28-1.7 6.62.07 2.34.83 4.53 2.1 6.25a1 1 0 0 1-.33 1.45l-1.86 1.86a1 1 0 0 0 .25 1.33l.12.09a11.25 11.25 0 0 0 6.59 6.59 1 1 0 0 0 1.33-.25l.09-.12a1 1 0 0 0 .33-.67 1 1 0 0 1-.67-1.33 1 1 0 0 0-.25-1.33l.12-.09a9.25 9.25 0 0 1-6.59-6.59 9.25 9.25 0 0 1-3.25-4.11 1 1 0 0 1-.33-.67l-.12-.09a1 1 0 0 0-.67-1.33 1 1 0 0 0-1.33.25l-.12.09a1 1 0 0 0-.33.67 1 1 0 0 1-.67 1.33 1 1 0 0 0-.25 1.33l-.12.09a1 1 0 0 0-.67 1.33 1 1 0 0 1-.33 1.33z" />
+                        <path d="M6.62 10.79a15.05 15.05 0 0 1 6.59-6.59l2.25 2.25a1 1 0 0 0 2.33-.67 3.17 3.17 0 0 1 2.72-2.72 1 1 0 0 0 .67-2.33A5.25 5.25 0 0 0 16.5 2c-2.89 0-5.5 1.47-7 3.84-1[...]
                     </svg>
                     Call MTN
                 </a>
