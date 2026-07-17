@@ -177,9 +177,9 @@
         
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-            max-width: 1000px;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            max-width: 900px;
             margin: 0 auto;
         }
         
@@ -192,6 +192,9 @@
             border: 1px solid var(--border);
             position: relative;
             overflow: hidden;
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
         }
         
         .product-card::before {
@@ -211,28 +214,58 @@
         
         .product-image {
             width: 100%;
-            height: 160px;
-            object-fit: cover;
+            height: 65vh;
+            min-height: 450px;
+            object-fit: contain;
             object-position: center;
             display: block;
+            flex-shrink: 0;
+            background: var(--bg);
+        }
+        
+        .product-image.zoom-image {
+            object-fit: cover;
+            transform: scale(1.15);
+            transform-origin: center;
+        }
+        
+        .product-name-overlay {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: white;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 0 2px rgba(0, 0, 0, 0.8);
+            z-index: 10;
+            background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+            padding: 15px 20px;
+            border-radius: 12px;
+            text-align: center;
         }
         
         .product-info {
-            padding: 20px;
+            padding: 40px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         
         .product-name {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            font-size: 1.15rem;
+            font-size: 2.5rem;
             color: var(--text);
-            margin-bottom: 8px;
+            margin-bottom: 20px;
         }
         
         .product-description {
-            font-size: 0.95rem;
+            font-size: 1.3rem;
             color: var(--text-light);
-            line-height: 1.5;
+            line-height: 1.8;
         }
         
         /* Action Buttons Section */
@@ -290,25 +323,25 @@
         }
         
         .btn-airtel {
-            background: #FF6600;
+            background: #E60000;
             color: white;
         }
         
         .btn-airtel:hover {
-            background: #E65100;
+            background: #CC0000;
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 102, 0, 0.3);
+            box-shadow: 0 8px 25px rgba(230, 0, 0, 0.3);
         }
         
         .btn-mtn {
-            background: #00A859;
-            color: white;
+            background: #FFCC00;
+            color: #000;
         }
         
         .btn-mtn:hover {
-            background: #008A47;
+            background: #E6B800;
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 168, 89, 0.3);
+            box-shadow: 0 8px 25px rgba(255, 204, 0, 0.3);
         }
         
         .btn-email {
@@ -324,6 +357,14 @@
         
         .action-btn i {
             font-size: 1.2rem;
+        }
+        
+        .action-icon {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            margin-right: 8px;
+            vertical-align: middle;
         }
         
         /* CTA Banner */
@@ -466,6 +507,14 @@
             <h2 class="section-title">Requirement Bundle Showcase</h2>
             <div class="products-grid">
                 <div class="product-card">
+                    <img src="./Clearance Package.png" alt="Complete Clearance Package" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Complete Clearance Package</div>
+                        <p class="product-description">All-in-one clearance bundle with all required items for BSPN Kavuyo reporting period. Best value bundle deal.</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
                     <img src="./liquid soap.jpg" alt="Premium Liquid Soap" class="product-image">
                     <div class="product-info">
                         <div class="product-name">Premium Liquid Soap</div>
@@ -490,9 +539,9 @@
                 </div>
                 
                 <div class="product-card">
-                    <img src="./bar soap.jpg" alt="Bar Soap" class="product-image">
+                    <img src="./bar soap.jpg" alt="Bar Soap" class="product-image zoom-image">
                     <div class="product-info">
-                        <div class="product-name">Cleaning Kit</div>
+                        <div class="product-name">White Star Bar Soap</div>
                         <p class="product-description">Curated arrangement of high-quality broom, scrubbing brush, and durable mopping rug for dorm cleaning.</p>
                     </div>
                 </div>
@@ -504,30 +553,22 @@
             <h2 class="action-title">Get Your Package Now!</h2>
             <div class="action-buttons">
                 <a href="https://wa.me/256746539328?text=Hello%20Joshua,%20I%20want%20to%20order%20my%20BSPN%20clearance%20package" target="_blank" class="action-btn btn-whatsapp">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20.52 3.48A11.94 11.94 0 0 0 9.33 2C4.59 2 2 4.59 2 9.33c0 2.67 1.47 5.02 3.83 6.41-.3.7-.46 1.52-.46 2.38 0 .83.15 1.6.44 2.31-1.17.62-2.03 1.77-2.03 2.97 0 .74.55 1.34 1.26 1.51.9.23 1.82-.08 2.55-.69.33.23.7.39 1.1.42.4.03.82-.14 1.17-.46.3-.3.67-.5 1.1-.62.68-.17 1.37-.25 2.08-.25.64 0 1.28.07 1.9.2.26.08.5.2.73.33.23.13.43.33.68.51.23.18.44.41.72.64.14.11.28.23.42.33.33.22.68.35 1.06.35.15 0 .3-.01.45-.03.15-.02.3-.05.45-.08 1.17-.33 2.18-1.01 2.95-1.88.15-.18.28-.37.41-.56.1-.15.19-.31.28-.47.13-.23.24-.48.33-.74.11-.28.19-.57.26-.86.07-.29.11-.59.15-.89.08-.56.12-1.12.12-1.68 0-5.42-4.35-9.85-9.78-9.85-.74 0-1.46.05-2.18.15A11.97 11.97 0 0 0 20.52 3.48Z" />
-                    </svg>
+                    <img src="./whatsapp logo.jpg" alt="WhatsApp" class="action-icon">
                     WhatsApp
                 </a>
                 
                 <a href="tel:0746539328" class="action-btn btn-airtel">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M6.62 10.79a15.05 15.05 0 0 1 6.59-6.59l2.25 2.25a1 1 0 0 0 2.33-.67 3.17 3.17 0 0 1 2.72-2.72 1 1 0 0 0 .67-2.33A5.25 5.25 0 0 0 16.5 2c-2.89 0-5.5 1.47-7 3.84-1.17 1.96-1.78 4.28-1.7 6.62.07 2.34.83 4.53 2.1 6.25a1 1 0 0 1-.33 1.45l-1.86 1.86a1 1 0 0 0 .25 1.33l.12.09a11.25 11.25 0 0 0 6.59 6.59 1 1 0 0 0 1.33-.25l.09-.12a1 1 0 0 0 .33-.67 1 1 0 0 1-.67-1.33 1 1 0 0 0-.25-1.33l.12-.09a9.25 9.25 0 0 1-6.59-6.59 9.25 9.25 0 0 1-3.25-4.11 1 1 0 0 1-.33-.67l-.12-.09a1 1 0 0 0-.67-1.33 1 1 0 0 0-1.33.25l-.12.09a1 1 0 0 0-.33.67 1 1 0 0 1-.67 1.33 1 1 0 0 0-.25 1.33l-.12.09a1 1 0 0 0-.67 1.33 1 1 0 0 1-.33 1.33z" />
-                    </svg>
+                    <img src="./airtel logo.jpg" alt="Airtel" class="action-icon">
                     Call Airtel
                 </a>
                 
                 <a href="tel:0768442790" class="action-btn btn-mtn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M6.62 10.79a15.05 15.05 0 0 1 6.59-6.59l2.25 2.25a1 1 0 0 0 2.33-.67 3.17 3.17 0 0 1 2.72-2.72 1 1 0 0 0 .67-2.33A5.25 5.25 0 0 0 16.5 2c-2.89 0-5.5 1.47-7 3.84-1.17 1.96-1.78 4.28-1.7 6.62.07 2.34.83 4.53 2.1 6.25a1 1 0 0 1-.33 1.45l-1.86 1.86a1 1 0 0 0 .25 1.33l.12.09a11.25 11.25 0 0 0 6.59 6.59 1 1 0 0 0 1.33-.25l.09-.12a1 1 0 0 0 .33-.67 1 1 0 0 1-.67-1.33 1 1 0 0 0-.25-1.33l.12-.09a9.25 9.25 0 0 1-6.59-6.59 9.25 9.25 0 0 1-3.25-4.11 1 1 0 0 1-.33-.67l-.12-.09a1 1 0 0 0-.67-1.33 1 1 0 0 0-1.33.25l-.12.09a1 1 0 0 0-.33.67 1 1 0 0 1-.67 1.33 1 1 0 0 0-.25 1.33l-.12.09a1 1 0 0 0-.67 1.33 1 1 0 0 1-.33 1.33z" />
-                    </svg>
+                    <img src="./mtn logo.jpg" alt="MTN" class="action-icon">
                     Call MTN
                 </a>
                 
                 <a href="mailto:joshuawangwe8@gmail.com?subject=BSPN%20Clearance%20Package%20Order" class="action-btn btn-email">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
-                    </svg>
+                    <img src="./email logo.jpg" alt="Email" class="action-icon">
                     Email Me
                 </a>
             </div>
